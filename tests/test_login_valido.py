@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 import conftest
 
 @pytest.mark.usefixtures("setup_teardown")
+@pytest.mark.login
 class TestLogin:
     def test_login_valido(self):
         driver = conftest.driver
