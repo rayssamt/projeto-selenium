@@ -1,10 +1,10 @@
 import pytest
 from selenium import webdriver
 
-driver: webdriver.Remote
+driver: webdriver.Remote #tornar a variável remota em outros arquivos
 
 
-@pytest.fixture
+@pytest.fixture #essa fixture vai ser usada nas classes em que eu chamá-la
 def setup_teardown():
     # setup
     global driver

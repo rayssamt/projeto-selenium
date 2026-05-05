@@ -6,7 +6,7 @@ class BasePage:
         self.driver = conftest.driver
 
     def encontrar_elemento(self, locator):
-        return self.driver.find_element(*locator)
+        return self.driver.find_element(*locator) #os parâmetro recebidos que são locators ex:By.ID
 
     def encontrar_elementos(self, locator):
         return self.driver.find_elements(*locator)
@@ -18,5 +18,4 @@ class BasePage:
         self.encontrar_elemento(locator).click()
 
     def verificar_se_elemento_existe(self, locator):
-        assert self.encontrar_elemento(locator).is_displayed(), f"O elemento '{locator }' não foi encontrado"
-        
+        assert self.encontrar_elemento(locator).is_displayed(), f"O elemento '{ locator }' não foi encontrado"
