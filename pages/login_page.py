@@ -17,7 +17,7 @@ class LoginPage(BasePage):
         # o metodo de login deve enviar o nome do usuario e senha (send_keys) pra um elemento que vamos achar através do find_element
         self.escrever(self.username_locator, usuario) #parametro: locator e o nome do usuario
         self.escrever(self.password_locator, senha)  #parametro: locator e senha
-        self.clicar(self.login_button)
+        self.clicar(self.login_button) #o * serve para desempacotar os dois parametros que vem no locator
         #posso usar o self.metodosDaBasePage porque passei a BasePage como parametro aqui na LoginPage
 
         # driver.find_element(By.ID, "user-name").send_keys("standard_user")
